@@ -44,7 +44,7 @@ h1,h2,h3{font-family:var(--font-display);text-wrap:balance;line-height:1.35;marg
 h2{font-size:clamp(26px,4vw,34px)}
 h3{font-size:21px}
 p{margin:0}
-.prose{max-width:66ch}
+.prose{max-width:none}
 .muted{color:var(--muted)}
 mark{background:linear-gradient(transparent 58%,var(--hl) 58%);color:inherit;padding:0 2px}
 
@@ -225,6 +225,14 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .fw-text h3{font-size:24px}
 .fw-text p{font-size:15.5px}
 .fw-go{text-decoration:none;white-space:nowrap}
+.res{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;padding:20px 22px;background:var(--card);border:1.5px solid var(--line);border-left:5px solid var(--accent);border-radius:12px;text-decoration:none;color:var(--ink)}
+.res:nth-child(even){border-left-color:var(--teal)}
+.res:hover{border-color:var(--accent)}
+.res-n{font-family:var(--font-mono);font-weight:600;font-size:15px;color:var(--accent);width:34px;height:34px;border-radius:50%;background:var(--accent-soft);display:grid;place-items:center}
+.res-t{display:flex;flex-direction:column;gap:2px;min-width:0}
+.res-t b{font-size:18px}
+.res-t small{font-family:var(--font-mono);font-size:13px;color:var(--muted);overflow-wrap:anywhere}
+.res-go{font-size:20px;font-weight:700;color:var(--accent)}
 .tools-list{margin:0;padding-left:1.2em;font-size:15.5px}
 .tools-list li{margin:6px 0}
 
@@ -283,11 +291,12 @@ footer{padding:56px 0 72px}
 <section class="part" id="bias">
   <div class="wrap stack">
     <div class="part-head"><span class="part-no">01</span><h2>AI 與偏見</h2></div>
+    <p>關於今天提到的 AI 與偏見，大家可以額外搜尋「<mark>Algorithmic Bias</mark>」去查閱更多相關的資料。</p>
     <div class="video-embed">
       <iframe src="https://www.youtube-nocookie.com/embed/tJQSyzBUAew" referrerpolicy="strict-origin-when-cross-origin" title="Ethics &amp; AI: Equal Access and Algorithmic Bias" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <p class="video-cap"><b>Ethics &amp; AI: Equal Access and Algorithmic Bias</b>（英文影片，可開啟字幕）· <a href="https://www.youtube.com/watch?v=tJQSyzBUAew">影片無法播放時，點這裡到 YouTube 觀看</a></p>
-    <p class="prose">AI 看起來很有創造力，但它的作品不是憑空出現的。它是把看過的大量資料重新組合，挑出「最有可能」的答案。<mark>而「最有可能」，常常就是資料裡出現最多次的那種樣子。</mark></p>
+    <p>AI 的原理是把看過的大量資料重新組合，挑出「最有可能」（多數決）的答案。<mark>而「最有可能」這個概念其實就跟文化的霸權有關係。</mark></p>
     <div class="grid3">
       <div class="card bias-type"><h3>刻板印象</h3><p>請 AI 畫「工程師」「護理師」「校長」，人物的性別、年齡、外貌往往很一致。</p></div>
       <div class="card bias-type"><h3>語言與文化霸權</h3><p>網路上英文與歐美觀點的內容占多數，問節慶、飲食、歷史時，預設答案常不是我們的在地經驗。</p></div>
@@ -659,6 +668,24 @@ function draw() {
     </article>
   </div>
 </section>
+
+<section class="part" id="more">
+  <div class="wrap stack">
+    <div class="part-head"><span class="part-no">+</span><h2>延伸資料</h2></div>
+    <div class="grid2">
+      <a class="res" href="https://www.youtube.com/@papayaclass">
+        <span class="res-n">1</span>
+        <span class="res-t"><b>學習基礎的電腦概念</b><small>youtube.com/@papayaclass</small></span>
+        <span class="res-go" aria-hidden="true">→</span>
+      </a>
+      <a class="res" href="https://glossary.da2.click/category/nav/">
+        <span class="res-n">2</span>
+        <span class="res-t"><b>認識 UI 元件的名稱</b><small>glossary.da2.click</small></span>
+        <span class="res-go" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer>
@@ -674,7 +701,7 @@ function draw() {
       </div>
       <div class="fb-list">
         <a class="fb" href="https://www.facebook.com/rainwing1028"><span>個人 Facebook</span><small>facebook.com/rainwing1028</small></a>
-        <a class="fb alt" href="https://www.facebook.com/techarttalks"><span>工作室粉專</span><small>facebook.com/techarttalks</small></a>
+        <a class="fb alt" href="https://www.facebook.com/techarttalks"><span>工作室粉絲專頁</span><small>facebook.com/techarttalks</small></a>
       </div>
     </div>
   </div>
